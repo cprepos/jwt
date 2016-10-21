@@ -15,6 +15,8 @@ Clone:
 Install:
 "cd jwt && npm install"
 
+AWS Credentials:
+Go to ./assets/AWSSecret.json and fill in your info, or email me and I'll send my credentials.
 
 Test:
 "npm test" // This will turn on REDIS, dynamoDB and Express server concurrently (not meant for production) and run a full end to end test 
