@@ -1,0 +1,25 @@
+<html ng-app="JWTApp">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+  <meta charset="UTF-8" />
+  <title>JWT Login</title>
+</head>
+
+<body ng-controller="MainController">
+  <form ng-submit="submit()" ng-controller="MainController">
+
+    <input type="text" placeholder="Username" ng-model="user" />
+    <input type="password" placeholder="Password" ng-model="pass" />
+     <input type="submit" id="submit" value="Submit" />
+  </form>
+  <textarea >{{jwt}}</textarea>
+  
+  <script src="./assets/angular/angular/angular.min.js"></script>
+  <script src="./assets/angular/angular-resource/angular-resource.min.js"></script>
+  <script src="./assets/JWTLogin.js"></script>
+  <script src="./assets/Factories/JWTLogin.factory.js"></script>
+  <script src="./assets/Controllers/JWTLogin.controller.js"></script>
+</body>
+
+</html>

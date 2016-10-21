@@ -1,0 +1,32 @@
+{
+  "name": "fit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "aws-dynamodb": "^0.1.59",
+    "aws-sdk": "^2.6.11",
+    "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "compression": "^1.6.2",
+    "concurrently": "^3.1.0",
+    "express": "^4.14.0",
+    "ipware": "^1.0.0",
+    "jsonwebtoken": "^7.1.9",
+    "md5": "^2.2.1",
+    "mocha": "^3.1.2",
+    "mocha-generators": "^1.2.0",
+    "nightmare": "^2.8.1",
+    "pem": "^1.8.3",
+    "redis": "^2.6.2",
+    "redis-rate-limiter": "^1.0.5",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "concurrently \"sleep 10 && ./node_modules/.bin/mocha -t 10000 --reporter spec\" \"./redis/redis-server.exe\" \"node ./server.js\" \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb\"",
+    "start": "set NODE_ENV=production && && \"./redis/redis-server.exe\" && \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb\" && \"node ./server.js\""
+  },
+  "author": "Chris Prepos",
+  "license": "ISC"
+}
