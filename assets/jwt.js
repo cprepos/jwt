@@ -112,26 +112,3 @@ function generateToken(req, UID, opts) {
 }
 
 
-/*
-//Logout function, not a part of current scope
-methods.logout = function (req, res, callback) {
-  // invalidate the token
-  var token = req.headers.authorization;
-  var decoded = verify(token, function (decoded) {
-    if (decoded) { 
-      // asynchronously read and invalidate
-      dynamo.getUID(decoded.auth, function (err, record) {
-        var updated = JSON.parse(record);
-        updated.valid = false;
-        dynamo.putUID(decoded.auth, updated, function (err) {
-          res.writeHead(200, { 'content-type': 'text/plain' });
-          res.end('Logged Out!');
-          return callback(res);
-        });//db put
-      });//db get
-    } else {
-      methods.authFail(res);
-      return callback(res);
-    }
-  });//verify
-}*/
