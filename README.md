@@ -9,7 +9,7 @@ is done using a $resource factory.
 
 
 Clone:
-"git clone https://github.com/cprepos/jwt/edit/master/README.md jwt"
+"git clone https://github.com/cprepos/jwt/ jwt"
 
 
 Install:
