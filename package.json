@@ -11,6 +11,7 @@
     "compression": "^1.6.2",
     "concurrently": "^3.1.0",
     "express": "^4.14.0",
+    "helmet": "^2.3.0",
     "ipware": "^1.0.0",
     "jsonwebtoken": "^7.1.9",
     "md5": "^2.2.1",

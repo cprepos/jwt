@@ -20,6 +20,10 @@ app.use(BodyParser.urlencoded({
 }));
 app.use(BodyParser.json());
 
+//Helmet to prevent targeted attacks
+var helmet = require('helmet');
+app.use(helmet());
+
 //init routes
 routes.setup(app);
 
