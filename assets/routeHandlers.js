@@ -1,8 +1,8 @@
-var jwt = require('./jwt.js');
-var dynamo = require('./aws.js');
+var jwt = require('./jwt.js'),
+dynamo = require('./aws.js'),
 //redis mem storage
-var redis = require('redis');
-var client = redis.createClient(6379, 'localhost', { enable_offline_queue: false });
+redis = require('redis'),
+client = redis.createClient(6379, 'localhost', { enable_offline_queue: false });
 
 //redis rate limiter. Tthis package because it also has the ability to spread the requests
 //so that users can't do 100 consecutive requests in 10 seconds. It will allow one per 0.6 seconds instead.
