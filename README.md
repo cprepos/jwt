@@ -42,10 +42,11 @@ SET NODE_ENV=production
 
 Install redis and connect dynamoDB and nGinx/Apache2 (forward port 8443 over HTTPS)
 
+Set up logging
+
+
 npm install pm2 -g
 pm2 start server.js -i 4 // controls forking, restarting, scaling and load balancing for the one server. We can expand to more as needed 
                          // and use the reverse proxy to control them.
                           
                           
-
-Set up logging
