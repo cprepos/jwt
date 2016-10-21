@@ -1,9 +1,10 @@
-var dynamo = require('./aws.js');
-var jwt = require('jsonwebtoken');
-var getIp = require('ipware')().get_ip;
-var md5 = require('md5');
-var JWTsecret = require('./JWTsecret.js');
-var _ = require('lodash');
+var dynamo = require('./aws.js'),
+    jwt = require('jsonwebtoken'),
+    getIp = require('ipware')().get_ip,
+    md5 = require('md5'),
+    JWTsecret = require('./JWTsecret.js'),
+    _ = require('lodash');
+
 //if we want RS256. Async also works on this apparently
 //Needs good certs
 /*var fs = require('fs');
