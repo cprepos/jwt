@@ -45,7 +45,7 @@ Handlers.auth = function () {
             else {
                 res.end('Rate limit reached for ' + req.method);
             }
-        });
+        });//limiter
     }//return
 }//auth
 Handlers.validate = function () {
