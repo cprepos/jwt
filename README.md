@@ -26,6 +26,11 @@ Start:
 "npm start" // Starts REDIS, dynamoDB and Express only, no tests. (not meant for production)
 
 
+
+
+
+
+
 Instructions for production:
 
 
