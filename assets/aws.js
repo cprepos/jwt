@@ -1,9 +1,9 @@
 //Load aws node package
-var AWS = require('aws-sdk');
-AWS.config.loadFromPath('./assets/AWSSecret.json');
+var AWS = require('aws-sdk'),
+AWS.config.loadFromPath('./assets/AWSSecret.json'),
 //Get dynamodb up and running
-var $db = new AWS.DynamoDB({ endpoint: new AWS.Endpoint('http://localhost:8000') });
-var DynamoDB = require('aws-dynamodb')($db);
+ $db = new AWS.DynamoDB({ endpoint: new AWS.Endpoint('http://localhost:8000') }),
+ DynamoDB = require('aws-dynamodb')($db);
 
 
 
