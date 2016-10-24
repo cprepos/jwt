@@ -15,9 +15,6 @@ Clone:
 Install:
 "cd jwt && npm install"
 
-AWS Credentials:
-Go to ./assets/AWSSecret.json and fill in your info, or email me and I'll send my credentials.
-
 Test:
 "npm test" // This will turn on REDIS, dynamoDB and Express server concurrently (not meant for production) and run a full end to end test 
 
@@ -43,6 +40,9 @@ SET NODE_ENV=production
 
 
 Install redis and connect dynamoDB and nGinx/Apache2 (forward port 8443 over HTTPS)
+
+Setup your AWS Credentials:
+Go to ./assets/AWSSecret.json and fill in your info. Only necessary in production the local DynamoDB store will accept any credentials and use the defaults if they are not real.
 
 Set up logging
 
