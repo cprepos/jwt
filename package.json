@@ -26,7 +26,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "concurrently \"sleep 10 && ./node_modules/.bin/mocha -t 10000 --reporter spec\" \"./redis/redis-server.exe\" \"node ./server.js\" \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb\"",
-    "start": "set NODE_ENV=production && && \"./redis/redis-server.exe\" && \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb\" && \"node ./server.js\""
+    "start": "concurrently \"./redis/redis-server.exe\" && \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb\" && \"node ./server.js\""
   },
   "author": "Chris Prepos",
   "license": "ISC"
