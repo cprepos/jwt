@@ -16,13 +16,13 @@ Install:
 "cd jwt && npm install"
 
 Test:
-"npm test" // This will turn on REDIS, dynamoDB and Express server concurrently (not meant for production) and run a full end to end test 
+"npm test" // This will turn on REDIS, dynamoDB and Express server concurrently (not meant for production) and run a full end to end test. This will only work in windows as that is the REDIS package I have added to this. For linux REDIS setup instructions go to https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis.
 
 
 
 
 Start:
-"npm start" // Starts REDIS, dynamoDB and Express only, no tests. (not meant for production)
+"npm start" // Starts REDIS, dynamoDB and Express only, no tests. (not meant for production, only windows. For linux install REDIS with instructions above)
 
 
 
