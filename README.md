@@ -48,6 +48,6 @@ Set up logging
 
 
 npm install pm2 -g
-pm2 start server.js -i 4 // controls forking, restarting, scaling and load balancing for the one server. We can expand to more as needed.
+pm2 start server.js -i 4 // controls forking, restarting, scaling and load balancing for the one server. I can expand to more as needed.
                           
                           
