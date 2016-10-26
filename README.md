@@ -23,7 +23,7 @@ install PM2:
 Install:
 "cd jwt && npm install"
 
-Test server:
+Test server (IMPORTANT, IF NON-GUI ONLY, USE xvfb-run OTHERWISE e2e TESTS WILL FAIL):
 if non-GUI Linux:"xvfb-run -a npm test" ; if GUI:"npm test". //This will concurrently start server/DynamoDB/tests. Not for production.
 
 Production Environment
