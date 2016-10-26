@@ -1,6 +1,6 @@
 
 # jwt
-#LINUX PROD SERVER INSTRUCTIONS
+#LINUX JWT PROD SERVER INSTRUCTIONS
 
 JWT authentication server using DynamoDB backend. 
 API has a redis based rate limiter that only allows
@@ -30,10 +30,10 @@ Production Environment
 "export NODE_ENV=production"
 
 Start Dynamo Server as service (this must be running with server:
-pm2 start DynamoLocalServer.js
+"pm2 start DynamoLocalServer.js"
 
 Start Production API server:
-pm2 start server.js -i 4
+"pm2 start server.js -i 4"
 
 
 
