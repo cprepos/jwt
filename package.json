@@ -26,8 +26,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "./node_modules/.bin/mocha -t 10000000 --reporter spec",
-    "start": "concurrently \"./redis/redis-server.exe\" && \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb\" && \"node ./server.js\""
+    "test": "concurrently \"sleep 4 && ./node_modules/.bin/mocha -t 10000000 --reporter spec\" \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -port 8001\" \"node ./server.js\"",
+    "start": "java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb -port 8001"
   },
   "author": "Chris Prepos",
   "license": "ISC"
