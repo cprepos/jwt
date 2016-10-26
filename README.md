@@ -29,7 +29,7 @@ if non-GUI Linux:"xvfb-run -a npm test" ; if GUI:"npm test". //This will concurr
 Production Environment
 "export NODE_ENV=production"
 
-Start Dynamo Server as service (this must be running with server:
+Start Dynamo Server as service (this must be running for everything to work obviously):
 "pm2 start DynamoLocalServer.js"
 
 Start Production API server:
