@@ -14,6 +14,7 @@
     "helmet": "^2.3.0",
     "ipware": "^1.0.0",
     "jsonwebtoken": "^7.1.9",
+    "lodash": "^4.16.4",
     "md5": "^2.2.1",
     "mocha": "^3.1.2",
     "mocha-generators": "^1.2.0",
@@ -25,7 +26,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "concurrently \"sleep 10 && ./node_modules/.bin/mocha -t 10000 --reporter spec\" \"./redis/redis-server.exe\" \"node ./server.js\" \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb\"",
+    "test": "./node_modules/.bin/mocha -t 10000000 --reporter spec",
     "start": "concurrently \"./redis/redis-server.exe\" && \"cd DynamoDB && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb\" && \"node ./server.js\""
   },
   "author": "Chris Prepos",

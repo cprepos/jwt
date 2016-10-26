@@ -3,7 +3,7 @@ var express = require('express'),
     app = express(),
     https = require('https'),
     pem = require('pem'),
-    routes = require("./assets/routes.js"),
+    routes = require(__dirname+"/assets/routes.js"),
     compression = require('compression'),
     BodyParser = require('body-parser');
 

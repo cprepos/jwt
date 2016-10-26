@@ -17,7 +17,6 @@ var settings = {
 describe('Angular test', function () {
     var nightmare;
 
-    this.timeout(settings.timeout);
 
     beforeEach(function* () {
         nightmare = Nightmare({

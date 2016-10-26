@@ -1,8 +1,15 @@
 //Load aws node package
 var AWS = require('aws-sdk');
-AWS.config.loadFromPath('./assets/AWSsecret.json');
+//NOTE: For some reason linux requires that I assign key and secret this way. Not clean code, this is a workaround
+//to an aws-sdk package bug. 
+var AWSCredentials = require(__dirname+'/AWSSecret.js')
+process.env.AWS_ACCESS_KEY_ID = AWSCredentials.accessKeyId;
+process.env.AWS_SECRET_ACCESS_KEY = AWSCredentials.secretAccessKey;
+process.env.AWS_REGION =  AWSCredentials.region;
+
+
 //Get dynamodb up and running
-var $db = new AWS.DynamoDB({ endpoint: new AWS.Endpoint('http://localhost:8000') }),
+var $db = new AWS.DynamoDB({ endpoint: new AWS.Endpoint('http://localhost:8001') }),
  DynamoDB = require('aws-dynamodb')($db);
 
 
