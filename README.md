@@ -23,13 +23,13 @@ install PM2:
 Install:
 "cd jwt && npm install"
 
-Test server:
+Test server (IMPORTANT, IF NON-GUI ONLY, USE xvfb-run OTHERWISE e2e TESTS WILL FAIL):
 if non-GUI Linux:"xvfb-run -a npm test" ; if GUI:"npm test". //This will concurrently start server/DynamoDB/tests. Not for production.
 
 Production Environment
 "export NODE_ENV=production"
 
-Start Dynamo Server as service (this must be running with server:
+Start Dynamo Server as service (this must be running for everything to work obviously):
 "pm2 start DynamoLocalServer.js"
 
 Start Production API server:
