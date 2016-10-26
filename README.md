@@ -33,7 +33,7 @@ Start Dynamo Server as service (this must be running for everything to work obvi
 "pm2 start DynamoLocalServer.js"
 
 Start Production API server:
-"pm2 start server.js -i 4"
+"pm2 start server.js -i 4" //edit the 4 for the number of processor cores you want to use or have available
 
 
 
